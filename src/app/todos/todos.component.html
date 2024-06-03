@@ -3,6 +3,19 @@
 </div>
 
 <!-- Html faltante -->
-<div>
-  <button class="btn btn-primary" (click)="randomMethod()">Search</button>
+<div class="todos-container">
+  <h1>Todos List</h1>
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search">
+    <button (click)="search()">Search todos</button>
+  </div>
+  <div *ngIf="filteredTodos.length === 0 && searchTerm" class="no-results">
+    <p>No results found</p>
+  </div>
+  <ul *ngIf="filteredTodos.length > 0">
+    <li *ngFor="let todo of filteredTodos">
+      <input type="checkbox" [checked]="todo.completed" disabled> {{ todo.title }}
+      <fa-icon [icon]="faInfoCircle" (click)="viewDetail(todo.id)" class="detail-icon"></fa-icon>
+    </li>
+  </ul>
 </div>

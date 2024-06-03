@@ -1,0 +1,49 @@
+/* Variables */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #343a40;
+$border-radius: 0.25rem;
+$padding: 1rem;
+$margin-bottom: 1rem;
+
+/* General styles */
+.todo-detail-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: $padding;
+  background-color: #fff;
+  border-radius: $border-radius;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+h2 {
+  text-align: center;
+  color: $primary-color;
+  margin-bottom: $margin-bottom;
+}
+
+p {
+  font-size: 1.1rem;
+  color: $text-color;
+  margin-bottom: $margin-bottom;
+  line-height: 1.5;
+
+  strong {
+    color: $secondary-color;
+  }
+}
+
+button {
+    padding: 0.5rem 1rem; /* Ajusta el padding según sea necesario */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 0.25rem; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Efecto de transición al pasar sobre el botón */
+  
+    &:hover {
+      background-color: #0056b3; /* Cambia el color de fondo al pasar sobre el botón */
+    }
+  }
